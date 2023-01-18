@@ -1,0 +1,161 @@
+npm init -y
+>package.json
+
+npm install -D parcel
+>node_modules
+>package-lock.json
+
+npm i react
+npm i react-dom
+
+<script type="module" src="./App.js"></script>
+
+npx parcel entrypoint
+npx parcel index.html
+
+Ignite our App:
+
+Adding React to it
+type="module"
+
+Add script to it
+
+Layout of the project
+ /**
+     * Header 
+     *  -Logo
+     *  -NavItems(RightSide)
+     *  -Cart
+
+    * Body
+     *  -Search bar
+     *  -ResturantList
+     *     -ResturantCard
+     *          -Image
+     *          -Name
+     *          -Rating
+     *          -Cusines
+     * Footer
+     *  -links
+     *  -Copyright 
+     * 
+     */
+
+React.Fragment
+React.Fragment is a Component which is exported by React and coming from React Library
+How to use then
+<React.Fragment>
+---
+---
+---
+</React.Fragment>
+
+JSX
+JSX can have only 1 parent
+if i dont want to div inside the root element then <React.Fragment></React.Fragment>
+React.Fragment is like an empty tag.
+So developers said React.Fragment looks ugly so they said we can write
+<>
+----
+----
+----
+</>
+above and React.Fragment means the same.
+
+Now styles:-----
+We cant pass style in the empty tag
+
+Inline styling in React:
+const styleObj={
+    backgroundColor:"red",
+}
+
+<div style={styleObj}></div>
+
+WE GIVE STYLING USING JAVASCRIPT OBJECT
+
+const styleObj={
+     backgroundColor:"yellow",
+}
+const Body=()=>{
+     return(
+          <h4 style={styleObj}>Body</h4>
+     )
+}
+
+// Footer
+const Footer=()=>{
+     return(
+          <h4 style={{backgroundColor:"green"}}>Footer</h4>
+     )
+}
+
+Props:
+Propeties
+Passing props means =>It is an attribute /data to the Component
+
+You pass in arguments and you receive data in parameters
+props is just an nomenclature in React
+normal function parameter
+props is nothing but an object.
+
+React wraps up all the Propeties into a variable name props.
+i can pass multiple 
+
+const ResturantCard=({restaurant})=>{
+     // destructing the resturant
+      const {cloudinaryImageId,name,cuisines,totalRatingsString}=restaurant.data
+  
+     return(
+               <div className="card">
+               <img 
+                    src={
+                         "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+restaurant.data?.cloudinaryImageId}
+                          alt=""/>
+               <h2>{restaurant.data?.name}</h2>
+               <h3>{restaurant.data?.cuisines.join(",")}</h3>
+               <h4>{restaurant.data?.totalRatingsString}</h4>
+          </div>
+          )         
+     
+}
+const Body=()=>{
+     return(
+          <div className="resturant-list">
+               <ResturantCard restaurant={resturantList[0]} hello="world"/>
+               {/* {ResturantCard(resturantList)} */}
+               <ResturantCard restaurant={resturantList[1]} hello="world"/>
+               <h4 style={styleObj}>Body</h4>
+          </div>         
+     )
+}
+
+Suppose if you dont want to destructing like above, you want to destructure on the fly.
+
+map is the best way to do functional programming.
+
+Virtual DOM:
+
+Virtual Dom is not only an concept of REACT.
+it is an concept of software engineering
+
+We keep a representation of DOM with us which is known as VD
+its an representation of DOM in our code.
+
+IN our code, we have root and other head body Footer
+
+Why we need Virtual DOM?
+For something known as Reconcillation in REact.
+Reconcillation is an alogorithm that REact uses to diff-alogorithm to find out the difference betwenn trees
+and it find out to be what needs to updated.
+and just update that small portion of it.
+It doesnt rerender the whole application.
+
+this process is known a Reconcillation.
+
+key=>unique.
+
+it will only rerender the speific portion of the app which found by diff alogorithm 
+
+React Fiber:
+
