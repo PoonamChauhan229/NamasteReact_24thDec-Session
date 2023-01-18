@@ -812,7 +812,7 @@ const Body=()=>{
                     return <ResturantCard {...element.data} key={restaurant.data.id}/>;
                })}
                {/* <ResturantCard {...resturantList[0].data}/> */}
-               {/* {ResturantCard(resturantList)} */}
+               {/* {ResturantCard(resturantList)} */}  
                {/* <ResturantCard {...resturantList[1].data} hello="world"/> */}
                <h4 style={styleObj}>Body</h4>
           </div>

@@ -1,0 +1,13 @@
+Now created a src folder.
+
+Every project we have src folder:
+Why it is needed?
+We can do it an 1 folder as well but we need to wrap it into 1 proper folder structure.
+
+Sometimes our app goes big so it becomes difficult to manage
+So  for file organization we need to create it
+
+All our files related to project, we will keep it into it.
+
+
+
