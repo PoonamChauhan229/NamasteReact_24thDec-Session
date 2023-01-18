@@ -1,0 +1,180 @@
+BUNDLERS:
+Most React apps will have their files “bundled” using tools like Webpack, Rollup or Browserify.
+
+BUNDLERS are used to minify the code,optimize the code
+
+parsel is a BUNDLERS but it is known as package
+
+package is like a module.(some peice of code)
+so we need a package manager
+
+npm /yarn -use for package manager
+
+NPM?
+NPM doesnt stand for node package manager.
+
+https://www.npmjs.com/
+NPM official website and no where its written it stand node package manager.
+
+even they troll on the website itself ... keep clicking on it 
+29 mins
+
+https://github.com/npm/npm-expansions
+
+
+SO now how to npm in our project
+
+npm init
+==npm initialize
+
+npm init-y
+
+when we have pacakage manager , let us ignite our apps
+using parcel
+https://parceljs.org/
+
+npm install parcel
+
+We dont want parcel on developer machine not on the production machine
+
+npm install -D parcel
+-D=> dev dependencies
+--save-dev
+
+dependencies is all the packages which our project needs.
+my project is dependent on something that is a dev dependencies
+parcel is one of such dependencies 
+dev dependencies means we need parcel in the developement environment.
+
+Now , why 2 files 
+
+tilde(~) and caret(^) in package.json beside version
+
+Read:
+https://stackoverflow.com/questions/22343224/whats-the-difference-between-tilde-and-caret-in-package-json
+
+caret(^) => automatically upgrade to minor version
+tilde(~) => automatically upgrade to major version
+
+Why we need pacakage-lock.json?
+pacakage-lock.json locks the version of it and keep it safe.
+it keeps a snapshot of what your system has.
+it is very important file
+it locks the version and you never have to keep it in gitignore
+maintains the exact version of it and hash  as well, this hash ensures what version of parcel was running in my system is exactly the same on production so it maintains the integrity.
+
+by default node modules, installed, what is this
+whenever we install anything it get installed in node modules.
+so node modules is like a database for npm
+from here the super powers are coming from
+
+how will parcel minify the code?
+parcel will use something minifier form node modules
+so parcel will use these helpers and optimize our code in production.
+
+
+you dont have to put node modules on the repository , it is the haeaviest one.
+it is foolish to do so.
+
+Why we dont put it in git 
+because our node modules has sufficient information to recreate the nodemodules.
+we can generate everything in node modules , if i have my pacakage.json and pacakage-lock.json
+if i have both the files, i can regenerate however heavy nodemodules is because nodemodules keep a track of all the dependencies.
+
+we will not push node modules , we will generate 
+1:08:24
+
+npm i react
+npm i react-dom
+
+Now let us ignite our app with parcel.
+
+npx parcel entrypoint
+npx parcel index.html
+x stands for execution.
+npx means execute using npm
+
+---------
+Server running at http://localhost:1234
+✨ Built in 652ms
+-------
+
+Uncaught ReferenceError: React is not defined
+    at App.js:1:16
+
+This error will come.
+i want to use something which is there in nodemodules
+so i have to import it
+
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+Still it wont work, and it gives an ugly error
+@parcel/transformer-js: Browser scripts cannot have imports or exports.
+
+
+never touc nodemodules and package-lock.json
+Wyy this error?
+because Browser understand its an normal js file
+so we have to say that its not an normal file.
+so add type="module" in the script tag.
+and 
+import ReactDOM from 'react-dom/client';
+
+
+Parcel:
+Production ready app then=>
+
+HMR-Hot Module Replacement=>it tracks for every change
+File Watcher algorithm written in C++ =>it tracks for every change and tels the server to Reloading
+BUNDLing
+minify
+Cleaning our Code=>removes console.log
+dev and production build
+super fast build alogorithm
+image optimization
+caching while developement
+compression
+compatible with older version of Browser
+https on dev =>npx parcel build index.html --https
+port no
+consistent hashing algorithm
+zero config
+Transitive dependencies
+This is known as transitive dependencies.
+
+We have 1 pacakage manager which handles transitive dependencies
+
+
+
+
+
+When i have to tell the parcel to make the production  build 
+how do i tell parcel
+npx parcel build index.html
+
+and  it will build inside the dist folder
+
+
+It should works on older browsers=>browserslist
+
+"browserslist": [
+    "last 2 versions"
+  ]
+
+  https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Test:
+    Why is happeneninh 1st Not rendered and then Hello world printing in the browser
+
+    Ans:Whenever page is reloaded, it takes sometime for react to get installed in the page.
+    Browser starts reading the page, browser comes to body and then script tag
+    if we check in network tab,under waterfall, we can see lag time to load
+    so thats the reason we see not rendered first and then the h1 tag
+
+-->
+    <div id="root">Not Rendered</div>
+
+<!--
+    Library Injected
+    React CDN
+https://reactjs.org/docs/cdn-links.html -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+<!-- Injectd the React Web version of React -->
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script>
+    const heading=React.createElement("h1",{},"Hello World")
+    console.log(heading)
+    const root=ReactDOM.createRoot(document.getElementById('root'))
+    // passing an react Element inside the root.
+    root.render(heading)
+
+    //{} for the element attribute//tag attribute
+    // {
+        // id:title
+    // }
+</script>
+</body>
+</html>

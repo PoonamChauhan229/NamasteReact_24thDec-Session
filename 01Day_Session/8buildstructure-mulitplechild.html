@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <div id="root">
+        <!-- Build an below structure, which has multiple children -->
+        <!-- <div id="container">
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+        </div> -->
+        
+    </div>
+
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+<!-- Injectd the React Web version of React -->
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script>
+    const heading1=React.createElement("h1",{id:"title"},"Heading1")
+    const heading2=React.createElement("h2",{id:"title"},"Heading2")
+
+    // want tp pass multiple child(children), we have to pass an array
+    const container=React.createElement("div",{id:"container"},[heading1,heading2])
+    console.log(heading1)
+    console.log(heading2)
+    const root=ReactDOM.createRoot(document.getElementById('root'))
+    // passing an react Element inside the root.
+    root.render(container)
+
+    //{} for the element attribute//tag attribute
+    // {
+        // id:title
+    // }
+
+    //  const heading1=React.createElement()
+    // it was very tedious and not userfriendly 
+    // most of the developers feel, React only has JSX.
+    // When was initially built, it was built with React.createElement()
+    // so there is a lot more ways to do the same thing and JSX ways are more easy than this.
+    // 
+</script>
+</body>
+</html>

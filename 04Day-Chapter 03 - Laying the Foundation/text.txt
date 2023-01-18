@@ -1,0 +1,76 @@
+ "scripts": {
+    "start":"parcel index.html",
+    "build":"parcel build index.html",
+    "test": "jest"
+  },
+
+
+//remove console log 
+install 1 package
+babel-plugin-transform-remove-console
+
+npm install babel-plugin-transform-remove-console --save-dev
+
+in bable.rc
+
+{
+  "plugins": [ ["transform-remove-console", 
+  { "exclude": [ "error", "warn"] }] ]
+}
+
+This is with the babel configurtiom
+
+
+Updating something in the DOM-Render
+
+
+Warning:
+
+Warning: Each child in a list should have a unique "key" prop.
+
+Check the top-level render call using <div>. See https://reactjs.org/link/warning-keys for more information.
+at h1
+
+Whenever we will have childrens in an array.
+We need to give a key but vwhy?
+
+how does React.createElement work?
+gives object and that is converted to HTML DOM
+
+
+Facebook developers developed JSX
+const heading2=(
+    <h1 id='title' key='h2'>
+        Namaste React</h1>
+)
+Never say the above code is html inside Javascript
+It looks like HTML but html like syntax
+
+How does JS file execute this code?
+Browser doesnt understand the JSX
+Who understand this?
+Babel understand this.
+
+
+Everything in REact is component based .
+
+Components:
+Functional Component:
+
+Functional component is nothing but a JS function that return a JSX or a React Element
+
+inside JSX, we can write any piece of Javascript code.
+{}
+
+
+Component Composition:
+If i have to use a component inside an component (Nested component)then its known as a component Composition or composing component
+
+
+
+
+
+
+
+
+

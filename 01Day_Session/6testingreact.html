@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Test:
+    Lot of h1 tags inside the root?
+        What will happen?
+        Will it get replaced or below h1 tag will be added to the next line or the above line?
+        Test that.......
+
+    Ans: it will get overwrite what is existing is there inside the root
+    React will replace with whatever you give inside the render
+-->
+    <div id="root">
+        <h1>HI</h1>
+        <h1>HI</h1>
+        <h1>HI</h1>
+        <h1>HI</h1>
+        <h1>HI</h1>
+        <h1>HI</h1>
+    </div>
+</body>
+<!--
+    Library Injected
+    React CDN
+https://reactjs.org/docs/cdn-links.html -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+<!-- Injectd the React Web version of React -->
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script>
+    const heading=React.createElement("h1",{},"Hello World")
+    console.log(heading)
+    const root=ReactDOM.createRoot(document.getElementById('root'))
+    // passing an react Element inside the root.
+    root.render(heading)
+
+    //{} for the element attribute//tag attribute
+    // {
+        // id:title
+    // }
+</script>
+</html>
