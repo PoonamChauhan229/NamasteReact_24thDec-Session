@@ -10,4 +10,12 @@ So  for file organization we need to create it
 All our files related to project, we will keep it into it.
 
 
+import and export
+
+Now create config.js
+
+Put all the hard coded file in contants.js
+
+Made the code clear by putting them in seperate files.
+
 
