@@ -19,3 +19,37 @@ Put all the hard coded file in contants.js
 Made the code clear by putting them in seperate files.
 
 
+With the below input box, its not possible to type anything in the input box
+
+and if the same thing is written in index.html then it working fine as per the nature of input box.
+
+React input is not exactly the HTML input box.
+
+inputbox written in React is somehow controlled by the React itself.
+
+So how it will work?
+
+REact follows 1 way databinding.
+
+so if we want to edit it ,
+we have to use onchange method
+
+When you change something, react rerenders it but it wont show 
+
+React maintains the state.
+
+Usestate:
+to create state varibles
+ returns an array , ist is the variablename
+SearchText is a local state variable
+[variablename,function to update the variable]=return array
+
+Why do we need react variable, if we have a normal variable
+
+let constant =10;
+somebody updated this variable, REact will not know when i have updated.
+React wont know i have to change it in UI
+
+
+
+

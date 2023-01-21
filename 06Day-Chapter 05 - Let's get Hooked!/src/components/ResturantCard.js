@@ -1,6 +1,6 @@
 import {IMG_CDN_URL} from "../contants"
 const RestaurantCard=({cloudinaryImageId,name,cuisines,totalRatingsString})=>{
-    console.log(cloudinaryImageId,name,cuisines,totalRatingsString)
+    // console.log(cloudinaryImageId,name,cuisines,totalRatingsString)
     return(
         <div className="card">
             <img src={IMG_CDN_URL + cloudinaryImageId} alt="" />
