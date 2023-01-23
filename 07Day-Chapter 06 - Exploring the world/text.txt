@@ -1,0 +1,7 @@
+(props):
+props.restaurant.data.name
+
+({restaurant})
+// this is a prop passed in component 
+restaurant.data.name
+
