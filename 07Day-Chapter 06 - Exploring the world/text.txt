@@ -5,3 +5,38 @@ props.restaurant.data.name
 // this is a prop passed in component 
 restaurant.data.name
 
+
+
+
+
+MonoLith
+
+Microservices Architecture:
+Instead of having just 1 project, now we have small small different projects 
+UI project
+Backend API project
+Notification project
+Logs project
+Authentication project
+etc
+
+Everything can be hosted on different ports and that is why we have different ports
+
+Advantages:
+Major one:
+Easier to test
+SOC(Seperation of Concern)=> No need to worry about other project
+
+
+
+1 hr done
+
+
+
+
+
+
+
+
+
+
