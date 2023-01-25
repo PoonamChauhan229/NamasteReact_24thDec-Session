@@ -28,8 +28,59 @@ Easier to test
 SOC(Seperation of Concern)=> No need to worry about other project
 
 
+Fetch():
+As an when my page loads call an API and fill the data.
 
-1 hr done
+2 Approach:
+
+1
+Page Load=> API call(300ms)=>render page(500ms)
+
+2=>best
+Page Load=> render the page(100ms)=>API(300ms)=>update UI.(500ms)
+
+React gives the amazing functionality which is known as useEffect
+
+
+useEffect:
+UseEffect is a hook ie, a function
+UseEffect has callback function and dependancy array.
+callback function will be called whenever the useEffect wants to call and not immediately
+React will make sure that it will call at a specific time.
+
+Whenever our component renders and rerenders so after each render it will call the function which we have passes inside the useEffect.
+
+When does the component renders?
+There are 2 places where it happens
+1-State chnages
+2-props chnages
+
+But thats a bad way to cal it after each render , we dont want to rerender so we have to pass empty dependancy array.
+
+i can pass even anything in dependancy array , if i want that after that change itself it should work
+
+useEffect-2 parameters
+
+****
+[]-not passed: Render again and again 
+[]-passed: render only once at the start.
+[searchTxt]: render only after searchTxt changes
+
+1:33
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

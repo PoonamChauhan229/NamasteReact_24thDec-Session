@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { resturantList } from "../constants";
 import ResturantCard from "./ResturantCard";
 
@@ -15,6 +15,11 @@ const Body = () => {
   // search text is local variable
   const [searchText, setSearchText] = useState(""); //create state variable.
   const [restaurant, setRestaurant] = useState(resturantList);
+
+  useEffect(()=>{
+    console.log("call this when dependancy is changed")
+  },[])
+
   return (
     <>
       {/* search */}
