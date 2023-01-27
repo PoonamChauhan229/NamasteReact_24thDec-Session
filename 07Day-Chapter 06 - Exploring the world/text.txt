@@ -63,10 +63,46 @@ useEffect-2 parameters
 
 ****
 []-not passed: Render again and again 
-[]-passed: render only once at the start.
-[searchTxt]: render only after searchTxt changes
+[]-passed:empty dependancyarray: once after render
+[searchTxt]: once after the initial render + everytime after the rerender(my searchText changes)
 
-1:33
+When we want to change something 
+
+https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING
+
+Error:CORS Error
+Access to fetch at 'https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING' from origin 'http://localhost:1234' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+
+Add extension in the chrome
+Allow CORS: Access-Control-Allow-Origin
+
+How to handle errors.
+
+
+Shimmer UI: 
+
+Conditional Rendering:
+if restaurant is empty=>shimmer UI 
+if restaurant has data=>actual data UI
+
+"Roti"==="roti
+>False
+
+"Roti".toLowerCase()==="roti".toLowerCase()
+>true
+
+Any Javascript works here , if ts an expression
+a=10// 1 statement
+console.log(a)//2 statement
+wnt work because both of the above is an statement
+there is a difference between statement and expression
+
+console.log()// its an expression
+
+((a=10),console.log(a))
+This will work because it became an expression
+so ultimately you can run any piece of code.
+but u can run any JS code but only expression not statement
 
 
 
