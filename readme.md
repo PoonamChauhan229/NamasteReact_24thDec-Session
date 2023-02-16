@@ -17,25 +17,25 @@
 - Chapter 16 - The End Game
 
 Additional Sessions:
-Chit Chat - Session
-AMA with Akshay (Chit-Chat Session)
-Bonus Session 1 - Personal Branding
-Bonus Session - LinkedIn
+- Chit Chat - Session
+- AMA with Akshay (- -Chat Session)
+- Bonus Session 1 --  Personal Branding
+- Bonus Session - L- inkedI- n
 
 Assignments:
-01 - Assignment - Inception
-02 - Assignment - Igniting our App
-03 - Assignment - Laying the Foundation
-04 - Assignment - Talk is cheap, show me the code!
-05 - Assignment - Let's get Hooked!
-06 - Assignment - Exploring the world
-07 - Assignment - Finding the Path
-08 - Assignment - Let's get Classy
-09 - Assignment - Optimizing our App
-10 - Assignment - Jo dikhta hai vo bikta hai
-11 - Assignment - Data is the new Oil
-12 - Assignment - Let's build our Store
-13 - Assignment - Time for the test
-14- Assignment - Machine Coding Round - Youtube
-15 - Assignment - YouTube Advanced
+- 01 - Assignment - Inception
+- 02 - Assignment - Igniting our App
+- 03 - Assignment - Laying the Foundation
+- 04 - Assignment - Talk is cheap, show me the code!
+- 05 - Assignment - Let's get Hooked!
+- 06 - Assignment - Exploring the world
+- 07 - Assignment - Finding the Path
+- 08 - Assignment - Let's get Classy
+- 09 - Assignment - Optimizing our App
+- 10 - Assignment - Jo dikhta hai vo bikta hai
+- 11 - Assignment - Data is the new Oil
+- 12 - Assignment - Let's build our Store
+- 13 - Assignment - Time for the test
+- 14 - Assignment - Machine Coding Round - Youtube
+- 15 - Assignment - YouTube Advanced
 
