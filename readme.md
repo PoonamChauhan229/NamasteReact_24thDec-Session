@@ -18,9 +18,9 @@
 
 Additional Sessions:
 - Chit Chat - Session
-- AMA with Akshay (- -Chat Session)
-- Bonus Session 1 --  Personal Branding
-- Bonus Session - L- inkedI- n
+- AMA with Akshay (Chit-Chat Session)
+- Bonus Session 1 - Personal Branding
+- Bonus Session - LinkedIn
 
 Assignments:
 - 01 - Assignment - Inception
