@@ -21,6 +21,8 @@ Additional Sessions:
 - AMA with Akshay (Chit-Chat Session)
 - Bonus Session 1 - Personal Branding
 - Bonus Session - LinkedIn
+- Bonus Session -Resume, Interviews and Salary Negotiation
+- Farewell
 
 Assignments:
 - 01 - Assignment - Inception
