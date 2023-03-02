@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
-import { restaurantList } from "../constants";
+import { Link } from "react-router-dom";
+import { filteredData } from "../utilis/helper";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 
-function filteredData(searchTxt,allRestaurant){
-    return allRestaurant.filter((element)=>element.data.name.toLowerCase().includes(searchTxt.toLowerCase()))
-}
 const Body = () => {
     const [allRestaurant,setAllRestaurant]=useState([])
     const [filteredRestaurant,setFilteredRestaurant]=useState([])
@@ -34,6 +32,7 @@ const Body = () => {
       />{" "}
       <button onClick={()=>{
         // filter data
+        // let data=filteredData(searchTxt,allRestaurant)
         let data=filteredData(searchTxt,allRestaurant)
         console.log(data)
         // update data
@@ -44,7 +43,7 @@ const Body = () => {
       </div>
       <div className="restaurant-list">
         {filteredRestaurant.map((element) => {
-          return <RestaurantCard {...element.data} key={element.data.id}/>;
+          return <Link to={'/restaurant/'+element.data.id}><RestaurantCard {...element.data} key={element.data.id}/></Link>;
         })}
       </div>
     

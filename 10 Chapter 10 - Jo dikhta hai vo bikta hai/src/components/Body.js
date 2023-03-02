@@ -49,11 +49,8 @@ return allrestaurant.length===0?<Shimmer/>:(
        <div className="restaurant-list">
      {
         filteredRestaurant.map((element)=>{
-            return(
-                <Link to={'/restaurant/'+element.data.id} key={element.data.id}>
-                    <RestaurantCard {...element.data} />
-                </Link>
-            ) 
+            return<Link to={'/restaurant/'+element.data.id}><RestaurantCard {...element.data} key={element.data.id} /></Link>
+            
         })
      }
        </div>
