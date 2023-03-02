@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { IMG_CDN_URL } from "../constants";
+import UserContext from "../utilis/UserContext";
 
 const RestaurantCard = ({name,cloudinaryImageId,cuisines,totalRatingsString}) => {
+ const {user}=useContext(UserContext)
   return (
     <>
         <div className="card">
@@ -8,6 +11,7 @@ const RestaurantCard = ({name,cloudinaryImageId,cuisines,totalRatingsString}) =>
             <h2>{name}</h2>
             <h4>{cuisines.join(" , ")}</h4>
             <h4>{totalRatingsString}</h4>
+            <h6>{user.name}-{user.email}</h6>
         </div>
     </>
   )

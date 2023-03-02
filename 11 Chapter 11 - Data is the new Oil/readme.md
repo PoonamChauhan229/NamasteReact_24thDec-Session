@@ -147,6 +147,42 @@ We just need to crack just what i need to show.
 
 UseContext:
 Want some peice of code to be accessible anywhere in app.
+A central placr where we keep things
+What we will do we will create a Context.
+
+undex utilis
+Create file UserContext.js
+1-import createContext
+//createContext is a function which takes the data which we need all across the function
+2-call the createContext function
+const UserContext=createContext({
+    name:"DummyName",
+    email:"dummy@gmail.com"
+})
+3-export default 
+
+<!-- Next how will we use the Context data into ur components -->
+4-import useContext from react
+//createcontext to create the context
+//useContext to use the context
+=>useContext is a hook and end of the hook is a function
+5-const {user}=useContext()
+6-import UserContext in Header.js
+
+
+State & Props: is tied to a component
+Context is not tied to any component and we can keep n central place so its an central store
+
+Context is lik useState for whole ig application
+We can use context whereever we wish to.
+
+Now, i dont want a dummy name.
+i want an actual authentication
+authenticate the userinfo get it and pass it to the context
+
+lets go the API call
+App.js
+
 
 
 

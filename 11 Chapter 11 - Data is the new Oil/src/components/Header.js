@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { useOnline } from "../utilis/useOnline";
+import { useContext } from "react";
+import UserContext from "../utilis/UserContext";
 const Title = () => {
   return <img src={logo} alt="logo" className="logo" />;
 };
 
 const Header = () => {
+  const {user}=useContext(UserContext)
+  console.log(user)
 
   const isOnline=useOnline()
   return (
@@ -27,6 +31,7 @@ const Header = () => {
           <li>Instamart</li>
           </Link>          
         </ul>
+        <h6>{user.name}-{user.email}</h6>
       </div>
     </div>
   );
