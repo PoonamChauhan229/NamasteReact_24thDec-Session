@@ -3,12 +3,16 @@ import logo from '../assets/logo.png'
 import { Link } from 'react-router-dom'
 import useOnline from '../utilis/useOnline'
 import UserContext from '../utilis/UserContext'
+import { useSelector } from 'react-redux'
 
 
 const Title=()=>{
   return <img src={logo} alt="" className='logo'/>
 }
 const Header = () => {
+
+  const cartItems=useSelector(store=>store.cart.items)
+  console.log(cartItems)
   const {user}=useContext(UserContext)
 
   const isOnline=useOnline()
@@ -23,6 +27,7 @@ const Header = () => {
           <Link to='/about'><li>About</li></Link>
           <Link to='/contact'><li>Contact Us</li></Link>
           <Link to='/instamart'><li>Instamart</li></Link>
+          <Link to='/cart'><li>Cart- {cartItems.length}items</li></Link>
         </ul>
       </div>
     </div>
